@@ -1,0 +1,15 @@
+
+.logo-size{
+    width: 20em;
+    height: 90%;
+}
+.icon-color a{
+    color: lightcyan;
+}
+
+.img-footer{
+    width: 6rem;
+  }
+  .bg-footer{
+    background-color: black;
+  }

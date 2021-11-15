@@ -1,0 +1,74 @@
+/* Banner Style Sheet */
+.caption h3 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+}
+.caption h4 {
+  font-weight: 700;
+  color: white;
+}
+
+.caption h3 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+}
+.h5color{
+  color: white;
+}
+.cover {
+  background: url(../../../images/banner/pexels-giorgio-de-angelis-1191109.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.cover2 {
+  background: url(../../../images/banner/pexels-vikram-sundaramoorthy-1119796.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.cover3 {
+  background: url(../../../images/banner/pexels-андрей-8194537.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+/* custom button css */
+.bf-color{
+  color:  white;
+  background: red;
+  
+  }
+  .bf-color:hover{
+      color: red;
+      background: white ;
+      }
+
+h1{
+  color: rgb(31, 30, 30);
+}
+
+.text-size {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.icon {
+  font-size: 3rem;
+}
+
+.card-background {
+  width: 100%;
+  color: white;
+  border-radius: 20px;
+  background: #6f98ff;
+  box-shadow: 0px 0px 10px #ff8989;
+  padding: 5px 5px;
+}
+
+.text-style {
+  margin-top: 0;
+  font-size: 18px;
+  text-align: center;
+}
