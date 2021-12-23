@@ -1,5 +1,5 @@
 import React from "react";
-import websitelogo from "../../images/logo.png";
+import websitelogo from "../../images/logo-01.png";
 import { Container, Image, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import UseAuth from "../../Hooks/UseAuth";
@@ -31,22 +31,29 @@ const NavigationBar = () => {
             navbarScroll
           >
             <NavLink to="/home" className="nav-link hover-underline text-white">
-              Home
+              HOME
             </NavLink>
 
             <NavLink to="/explore" className="nav-link hover-underline text-white">
-              Explore
+              CATEGORIES
+            </NavLink>
+            <NavLink to="/menu" className="nav-link hover-underline text-white">
+              MENU
             </NavLink>
 
             <NavLink to="/dashboard" className="nav-link hover-underline text-white">
-              Dashboard
+              DASHBOARD
             </NavLink>
 
             <NavLink to="/about" className="nav-link hover-underline text-white">
-              About
+              ABOUT US
             </NavLink>
           </Nav>
           <Nav>
+            <form class="d-flex px-lg-4">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
             {user.email ? (
               <Nav className="d-flex align-items-center">
                 <Navbar.Text className="text-center">

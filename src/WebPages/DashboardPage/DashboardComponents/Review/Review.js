@@ -16,7 +16,7 @@ const Review = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("https://lit-reaches-46480.herokuapp.com/reviews", data).then((res) => {
+    axios.post("http://localhost:5000/reviews", data).then((res) => {
       console.log(res);
       if (res.data.insertedId) {
         Swal.fire("Thanks", "Your review has been Completed!", "success");

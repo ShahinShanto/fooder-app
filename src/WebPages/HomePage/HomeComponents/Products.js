@@ -4,7 +4,7 @@ import ProductCard from "../../../SharedComponents/ProductCard/ProductCard";
 const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://lit-reaches-46480.herokuapp.com/products")
+    fetch("http://localhost:5000/products")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   });
@@ -12,8 +12,8 @@ const Products = () => {
     <section className="my-5">
       <div>
         <div className="text-center">
-          <h1 className="mt-5">Featured Bike in 2021</h1>
-          <p className="text-danger">FEATURED BIKES</p>
+          <h1 className="mt-5 text-warning">Delicious Deals</h1>
+          <h4 className="mb-4">Delicious Meals</h4>
         </div>
         <div className="container">
           <div className="row row-cols-1 row-cols-md-3 g-4 ">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
 import { useParams } from "react-router";
+import Footer from "../Footer/Footer";
 import NavigationBar from "../NavigationBar/NavigationBar";
 import OrderForm from "../OrderForm/OrderForm";
 
@@ -9,7 +10,7 @@ const PurchaseBike = () => {
   const [products, setProducts] = useState([]);
   const [singleBike, setSingleBike] = useState({});
   useEffect(() => {
-    fetch("https://lit-reaches-46480.herokuapp.com/products")
+    fetch("http://localhost:5000/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -27,7 +28,7 @@ const PurchaseBike = () => {
           <h1 className="card-title fw-bold text-dark mt-5 pt-5 pb-3">
             Purchase
             <br />
-            <span className="text-danger">{singleBike?.bikeName}</span>
+            <span className="text-danger">{singleBike?.name}</span>
 
           </h1>
         </div>
@@ -39,7 +40,7 @@ const PurchaseBike = () => {
             <div className=" mb-3">
               <img src={singleBike?.img} className="card-img-top" style={{ height: '21rem', width: '26em' }} alt="..." />
               <div className="card-body">
-                <h1 className="card-title">{singleBike?.bikeName}</h1>
+                <h1 className="card-title">{singleBike?.name}</h1>
                 <div>
                   <h3>
                     <span className="fw-bold text-danger">
@@ -56,22 +57,21 @@ const PurchaseBike = () => {
                       fullSymbol="fas text-warning fa-star"
                       readonly
                     />
-                    {singleBike?.rating} ({singleBike?.totalReviews})
+                    {singleBike?.rating} ({singleBike?.review})
                   </div>
-                  <p className="">Fuel Capacity: {singleBike?.fuel}</p>
                 </div>
-                <div>
 
-                  <p className="">Weight: {singleBike?.weight}</p>
+                <div className="fw-bold card-text mt-3">
+                  <h3 className="text-warning">Overview
+                  </h3>
                 </div>
-                <div className="fw-bold card-text mt-3">Overview</div>
-                <p className="">{singleBike?.description}</p>
+                <h5 className="">{singleBike?.description}</h5>
               </div>
             </div>
           </div>
 
           <div className="col-12 col-md-5">
-            {singleBike?.bikeName ? (
+            {singleBike?.name ? (
               <div className="card bg-dark text-white">
                 <h3 className="fw-bold text-center my-3">
                   Order
@@ -79,7 +79,7 @@ const PurchaseBike = () => {
                 <OrderForm
                   carId={productId}
                   bikeImage={singleBike?.img}
-                  bikeName={singleBike?.bikeName}
+                  name={singleBike?.name}
                   price={singleBike?.price}
                 ></OrderForm>
               </div>
@@ -89,6 +89,7 @@ const PurchaseBike = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

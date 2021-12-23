@@ -3,6 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import UseAuth from "../../Hooks/UseAuth";
+import Footer from "../Footer/Footer";
 
 const OrderForm = (props) => {
   const { user } = UseAuth();
@@ -16,7 +17,7 @@ const OrderForm = (props) => {
   const onSubmit = (data) => {
     console.log(data);
     Swal.fire({
-      title: "Are you sure, you want to purchase this?",
+      title: "Are you sure, you want to order this?",
       text: "You won't be able to revert this!",
       icon: "question",
       showCancelButton: true,
@@ -25,7 +26,7 @@ const OrderForm = (props) => {
       confirmButtonText: "Yes!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.post("https://lit-reaches-46480.herokuapp.com/orders", data).then((response) => {
+        axios.post("http://localhost:5000/orders", data).then((response) => {
           console.log(response);
           if (response.data.insertedId) {
             Swal.fire(
@@ -47,24 +48,27 @@ const OrderForm = (props) => {
   };
 
   return (
-    <div className="container">
+
+
+
+    <div className="container ">
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           hidden
-          value={props.bikeId || " "}
-          {...register("bikeID", { required: true })}
+          value={props.foodId || " "}
+          {...register("foodID", { required: true })}
         />
 
         <input
           hidden
-          value={props.bikeImage || " "}
-          {...register("bikeImage", { required: true })}
+          value={props.foodImage || " "}
+          {...register("foodImage", { required: true })}
         />
 
         <input
           hidden
-          value={props.bikeName || " "}
-          {...register("bikeName", { required: true })}
+          value={props.name || " "}
+          {...register("name", { required: true })}
         />
 
         <input
@@ -113,7 +117,6 @@ const OrderForm = (props) => {
           <div className="col">
             <label>Payment Type</label>
             <select className="form-control" {...register("paymentType")}>
-              <option value="Bank Cheque">Cheque</option>
               <option value="Gateway">Gateway</option>
               <option value="Cash">Cash</option>
             </select>
@@ -122,11 +125,11 @@ const OrderForm = (props) => {
 
         <div className="row mb-3">
           <div className="col">
-            <label>Purchase Date</label>
+            <label>Order Date</label>
             <input
               type="date"
               className="form-control mb-3"
-              {...register("PurchaseDate", { required: true })}
+              {...register("OrderDate", { required: true })}
             />
             {errors.DepDate && (
               <span className="text-danger">This field is required!</span>
@@ -142,10 +145,11 @@ const OrderForm = (props) => {
         <input
           className="btn btn-danger  mb-5 w-100"
           type="submit"
-          value="Book Now"
+          value="Confirm Order"
         />
       </form>
     </div>
+
   );
 };
 

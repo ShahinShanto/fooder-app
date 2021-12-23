@@ -4,7 +4,7 @@ import defaultImage from "../../../images/defaultUser.png";
 const UsersReview = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://lit-reaches-46480.herokuapp.com/reviews")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -13,8 +13,8 @@ const UsersReview = () => {
     console.log(rate) */
   return (
     <div className="py-3 text-center">
-      <h1 className="mt-2">Customers Says</h1>
-      <p className="text-danger mb-5">REVIEW</p>
+      <h1 className="mt-2 text-warning ">Customers Says</h1>
+      <p className=" mb-5">REVIEW</p>
       <div className="container">
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {reviews.map((review) => (

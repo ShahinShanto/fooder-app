@@ -6,7 +6,7 @@ import Footer from "../../SharedComponents/Footer/Footer";
 const ExploreProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://lit-reaches-46480.herokuapp.com/products")
+    fetch("http://localhost:5000/products")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   });

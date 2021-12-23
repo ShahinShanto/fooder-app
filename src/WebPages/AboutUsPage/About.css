@@ -1,29 +1,9 @@
-.text-color{
-    color:red;
-}
-
-.fa-star{
-    color: red;
-}
-.fa-star-half-alt{
-    color: red;
-}
-.card2{
-    width: 100%;
-    background-color: red;
-    border-radius: 1.5rem;
-    box-shadow:0px 0px 10px #212222;
-    max-width: 90%;
-    margin-top: 0;
-}
 .text-followers{
-    text-align: center;
     margin-bottom: 0;
 }
 .text-followers2{
     margin-top: 0;
     font-size:1.5rem;
-    text-align: center;
 
 }
 .icon{
@@ -33,10 +13,14 @@
 .d-flex{
     justify-content: space-around;
 }
-.card-background{
-    background:rgb(20, 20, 20);
-
+.banner-area{
+    background-repeat: no-repeat;
+    align-items: center ;
+    justify-content: center ;
+    width:100%;
+    background:url(../../images/Cover.png);
 }
-.fcolor{
-color: white;
+.bff-color{
+    font-size: 3rem !important;
+    color: rgb(231, 179, 46);
 }

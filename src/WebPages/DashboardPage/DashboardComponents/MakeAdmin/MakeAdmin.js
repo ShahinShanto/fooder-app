@@ -12,7 +12,7 @@ const MakeAdmin = () => {
   } = useForm();
 
   const handleMakeAdmin = (data) => {
-    axios.put("https://lit-reaches-46480.herokuapp.com/users/admin", data).then((response) => {
+    axios.put("http://localhost:5000/users/admin", data).then((response) => {
       console.log(response);
       if (response.data.modifiedCount) {
         Swal.fire(

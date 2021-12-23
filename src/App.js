@@ -10,6 +10,7 @@ import Dashboard from "./WebPages/DashboardPage/Dashboard";
 import PurchaseCar from "./SharedComponents/PurchaseBikePage/PurchaseBike";
 import PrivateRoute from "./SharedComponents/PrivateRoute/PrivateRoute";
 import About from "./WebPages/AboutUsPage/About";
+import Menu from "./Menu/Menu";
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,9 @@ function App() {
           </PrivateRoute>
           <Route path="/explore">
             <ExploreProducts></ExploreProducts>
+          </Route>
+          <Route path="/menu">
+            <Menu></Menu>
           </Route>
           <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>

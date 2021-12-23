@@ -14,7 +14,7 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("https://lit-reaches-46480.herokuapp.com/products", data).then((response) => {
+    axios.post("http://localhost:5000/products", data).then((response) => {
       console.log(response);
       if (response.data.insertedId) {
         Swal.fire(
@@ -43,21 +43,21 @@ const AddProduct = () => {
           <input
             hidden
             value="0"
-            {...register("totalReviews", { required: true })}
+            {...register("review", { required: true })}
           />
 
           <input hidden value="0" {...register("rating", { required: true })} />
 
-          <label>Enter Bike Name</label>
+          <label>Enter Food Name</label>
           <input
             className="form-control mb-3"
-            {...register("bikeName", {
+            {...register("name", {
               required: true,
               maxLength: 100,
             })}
-            placeholder="Bike name"
+            placeholder="Food name"
           />
-          {errors.bikeName?.type === "required" && "package name is required"}
+          {errors.name?.type === "required" && "package name is required"}
 
           <label>Image URL</label>
           <input
@@ -78,20 +78,12 @@ const AddProduct = () => {
           <label>Description</label>
           <textarea
             className="form-control w-100 mb-5"
-            placeholder="Bike Description..."
+            placeholder="Food Description..."
             {...register("description", { required: true })}
           />
           {errors.description?.type === "required" &&
             "Bike description is required"}
 
-          <label>Fuel Capacity</label>
-          <textarea
-            className="form-control w-100 mb-5"
-            placeholder="Fuel Capacity..."
-            {...register("fuel", { required: true })}
-          />
-          {errors.fuel?.type === "required" &&
-            "fuel description is required"}
 
           <input
             className="btn bg-danger text-white rounded py-2 px-4 mb-2 fw-bold"

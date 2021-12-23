@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const [isUpdated, setIsUpdated] = useState(null);
 
   useEffect(() => {
-    fetch("https://lit-reaches-46480.herokuapp.com/orders")
+    fetch("http://localhost:5000/orders")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -16,7 +16,7 @@ const ManageOrders = () => {
   }, [isUpdated]);
 
   const handleUpdateOrder = (id) => {
-    const url = `https://lit-reaches-46480.herokuapp.com/orders/${id}`;
+    const url = `http://localhost:5000/orders/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -43,7 +43,7 @@ const ManageOrders = () => {
     console.log(proceed);
 
     if (proceed) {
-      const url = `https://lit-reaches-46480.herokuapp.com/orders/${id}`;
+      const url = `http://localhost:5000/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -84,7 +84,7 @@ const ManageOrders = () => {
                           User ID : {order.userId}
                         </small>
                       </p>
-                      <h5 className="card-title">Bike Name : {order.bikeName}</h5>
+                      <h5 className="card-title">Food Name : {order.name}</h5>
 
                       <p className="card-text m-0">
                         <span className="fw-bold">Price:</span> {order.price}

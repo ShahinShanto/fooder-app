@@ -1,0 +1,52 @@
+.burger{
+    background-repeat: no-repeat;
+    align-items: center ;
+    justify-content: center ;
+    width:100%;
+    background:url(../images/categories/burger.jpg);
+    
+}
+.pizza{
+    background-repeat: no-repeat;
+    align-items: center ;
+    justify-content: center ;
+    width:100%;
+    background:url(../images/categories/menu-pizza.jpg);
+}
+.momos{
+    background-repeat: no-repeat;
+    align-items: center ;
+    justify-content: center ;
+    width:100%;
+    background:url(../images/categories/momo.jpg);
+}
+.chicken{
+    background-repeat: no-repeat;
+    align-items: center ;
+    justify-content: center ;
+    width:100%;
+    background:url(../images/categories/maxresdefault.jpg);
+}
+.biriyani{
+    background-repeat: no-repeat;
+    align-items: center ;
+    justify-content: center ;
+    width:100%;
+    background:url(../images/categories/Best-Mutton-Biryani-Recipe.jpg);
+}
+.fries{
+    background-repeat: no-repeat;
+    align-items: center ;
+    justify-content: center ;
+    width:100%;
+    background:url(../images/categories/air-fryer-french-fries-4.jpg);
+}
+.box-3{
+    width: 20rem;
+    height:23rem;
+    float: left;
+    margin: 2%;
+}
+
+
+ 

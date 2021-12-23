@@ -6,7 +6,7 @@ import AddProduct from "./DashboardComponents/AddProduct/AddProduct";
 import ManageOrders from "./DashboardComponents/ManageOrders/ManageOrders";
 import MyOrders from "./DashboardComponents/MyOrders/MyOrders";
 import PaymentGateway from "./DashboardComponents/PaymentGatway/PaymentGatway";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo-01.png";
 import Review from "./DashboardComponents/Review/Review";
 import ManageProducts from "./DashboardComponents/ManageProducts/ManageProducts";
 import MakeAdmin from "./DashboardComponents/MakeAdmin/MakeAdmin";
